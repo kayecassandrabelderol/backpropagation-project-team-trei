@@ -69,13 +69,13 @@ public partial class Form1 : Form
 
     private void saveweight_Click(object sender, EventArgs e)
     {
-        SaveFileDialog saveFileDialog = new SaveFileDialog();
-        saveFileDialog.Filter = "txt files (*.txt)|*.txt";
-        string path = string.Empty;
+        //SaveFileDialog saveFileDialog = new SaveFileDialog();
+        //saveFileDialog.Filter = "txt files (*.txt)|*.txt";
+        string path = "D:\\CIT-U\\ISTeam\\weights.txt";
 
-        if(saveFileDialog.ShowDialog() == DialogResult.Cancel)
-            return;
-        path = Path.GetFullPath(saveFileDialog1.FileName);
+        //if(saveFileDialog.ShowDialog() == DialogResult.Cancel)
+        //    return;
+        //path = Path.GetFullPath(saveFileDialog1.FileName);
         nn.saveWeights(path);
     }
 
