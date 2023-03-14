@@ -1,4 +1,5 @@
 using Backprop;
+using System.Diagnostics;
 
 namespace Backpropagation_team_trei;
 public partial class Form1 : Form
@@ -13,7 +14,7 @@ public partial class Form1 : Form
 
     private void button1_Click(object sender, EventArgs e)
     {
-        nn = new NeuralNet(1, 4, 1);
+        nn = new NeuralNet(8, 5, 1);
     }
 
     private void button2_Click(object sender, EventArgs e)
@@ -30,6 +31,8 @@ public partial class Form1 : Form
 
         for (int i = 0; i < Convert.ToInt32(textBox4.Text); i++)
         {
+            Debug.WriteLine("Epoch " + Convert.ToInt32(textBox4.Text));
+
             foreach (var row in data)
             {
                 nn.setInputs(0, row.Inputs[0]);
