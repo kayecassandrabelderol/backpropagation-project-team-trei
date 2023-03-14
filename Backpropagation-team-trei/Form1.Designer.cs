@@ -43,8 +43,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.saveweight = new System.Windows.Forms.Button();
+            this.loadweight = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -56,14 +56,16 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.openFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(319, 47);
+            this.button1.Location = new System.Drawing.Point(279, 35);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 44);
+            this.button1.Size = new System.Drawing.Size(103, 33);
             this.button1.TabIndex = 3;
             this.button1.Text = "Create Model";
             this.button1.UseVisualStyleBackColor = true;
@@ -71,9 +73,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(319, 97);
+            this.button2.Location = new System.Drawing.Point(279, 73);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 37);
+            this.button2.Size = new System.Drawing.Size(103, 28);
             this.button2.TabIndex = 4;
             this.button2.Text = "Train";
             this.button2.UseVisualStyleBackColor = true;
@@ -81,9 +84,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(400, 656);
+            this.button3.Location = new System.Drawing.Point(350, 492);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(117, 37);
+            this.button3.Size = new System.Drawing.Size(102, 28);
             this.button3.TabIndex = 5;
             this.button3.Text = "Test";
             this.button3.UseVisualStyleBackColor = true;
@@ -91,125 +95,132 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(523, 656);
+            this.button4.Location = new System.Drawing.Point(458, 492);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(118, 37);
+            this.button4.Size = new System.Drawing.Size(103, 28);
             this.button4.TabIndex = 6;
             this.button4.Text = "Clear";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(174, 102);
+            this.textBox4.Location = new System.Drawing.Point(152, 76);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(125, 27);
+            this.textBox4.Size = new System.Drawing.Size(110, 23);
             this.textBox4.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 107);
+            this.label1.Location = new System.Drawing.Point(66, 80);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 20);
+            this.label1.Size = new System.Drawing.Size(74, 15);
             this.label1.TabIndex = 8;
             this.label1.Text = "Epoch Value:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(75, 198);
+            this.label2.Location = new System.Drawing.Point(66, 148);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 20);
+            this.label2.Size = new System.Drawing.Size(116, 15);
             this.label2.TabIndex = 9;
             this.label2.Text = "General Appearance:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(75, 251);
+            this.label3.Location = new System.Drawing.Point(66, 188);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 20);
+            this.label3.Size = new System.Drawing.Size(116, 15);
             this.label3.TabIndex = 10;
             this.label3.Text = "Manner of Speaking:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(75, 307);
+            this.label4.Location = new System.Drawing.Point(66, 230);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 20);
+            this.label4.Size = new System.Drawing.Size(109, 15);
             this.label4.TabIndex = 11;
             this.label4.Text = "Physical Condition:";
             // 
             // output
             // 
-            this.output.Location = new System.Drawing.Point(195, 661);
+            this.output.Location = new System.Drawing.Point(171, 496);
+            this.output.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.output.Name = "output";
-            this.output.Size = new System.Drawing.Size(193, 27);
+            this.output.Size = new System.Drawing.Size(169, 23);
             this.output.TabIndex = 12;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(75, 360);
+            this.label5.Location = new System.Drawing.Point(66, 270);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(122, 20);
+            this.label5.Size = new System.Drawing.Size(98, 15);
             this.label5.TabIndex = 13;
             this.label5.Text = "Mental Alertness:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(75, 569);
+            this.label6.Location = new System.Drawing.Point(66, 427);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(197, 20);
+            this.label6.Size = new System.Drawing.Size(159, 15);
             this.label6.TabIndex = 21;
             this.label6.Text = "Student Performance Rating:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(75, 519);
+            this.label7.Location = new System.Drawing.Point(66, 389);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(154, 20);
+            this.label7.Size = new System.Drawing.Size(126, 15);
             this.label7.TabIndex = 20;
             this.label7.Text = "Communication Skills:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(75, 467);
+            this.label8.Location = new System.Drawing.Point(66, 350);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(164, 20);
+            this.label8.Size = new System.Drawing.Size(130, 15);
             this.label8.TabIndex = 19;
             this.label8.Text = "Ability to Present Ideas:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(75, 410);
+            this.label9.Location = new System.Drawing.Point(66, 308);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(118, 20);
+            this.label9.Size = new System.Drawing.Size(95, 15);
             this.label9.TabIndex = 18;
             this.label9.Text = "Self-Confidence:";
             // 
-            // button5
+            // saveweight
             // 
-            this.button5.Location = new System.Drawing.Point(649, 33);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(118, 37);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "Save Weights";
-            this.button5.UseVisualStyleBackColor = true;
+            this.saveweight.Location = new System.Drawing.Point(568, 25);
+            this.saveweight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.saveweight.Name = "saveweight";
+            this.saveweight.Size = new System.Drawing.Size(103, 28);
+            this.saveweight.TabIndex = 23;
+            this.saveweight.Text = "Save Weights";
+            this.saveweight.UseVisualStyleBackColor = true;
+            this.saveweight.Click += new System.EventHandler(this.saveweight_Click);
             // 
-            // button6
+            // loadweight
             // 
-            this.button6.Location = new System.Drawing.Point(649, 99);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(118, 37);
-            this.button6.TabIndex = 24;
-            this.button6.Text = "Load Weights";
-            this.button6.UseVisualStyleBackColor = true;
+            this.loadweight.Location = new System.Drawing.Point(568, 74);
+            this.loadweight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.loadweight.Name = "loadweight";
+            this.loadweight.Size = new System.Drawing.Size(103, 28);
+            this.loadweight.TabIndex = 24;
+            this.loadweight.Text = "Load Weights";
+            this.loadweight.UseVisualStyleBackColor = true;
+            this.loadweight.Click += new System.EventHandler(this.loadweight_Click);
             // 
             // comboBox1
             // 
@@ -220,9 +231,10 @@
             "3",
             "4",
             "5"});
-            this.comboBox1.Location = new System.Drawing.Point(319, 195);
+            this.comboBox1.Location = new System.Drawing.Point(279, 146);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(88, 28);
+            this.comboBox1.Size = new System.Drawing.Size(78, 23);
             this.comboBox1.TabIndex = 25;
             // 
             // comboBox2
@@ -234,9 +246,10 @@
             "3",
             "4",
             "5"});
-            this.comboBox2.Location = new System.Drawing.Point(319, 248);
+            this.comboBox2.Location = new System.Drawing.Point(279, 186);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(88, 28);
+            this.comboBox2.Size = new System.Drawing.Size(78, 23);
             this.comboBox2.TabIndex = 26;
             // 
             // comboBox3
@@ -248,9 +261,10 @@
             "3",
             "4",
             "5"});
-            this.comboBox3.Location = new System.Drawing.Point(319, 304);
+            this.comboBox3.Location = new System.Drawing.Point(279, 228);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(88, 28);
+            this.comboBox3.Size = new System.Drawing.Size(78, 23);
             this.comboBox3.TabIndex = 27;
             // 
             // comboBox4
@@ -262,9 +276,10 @@
             "3",
             "4",
             "5"});
-            this.comboBox4.Location = new System.Drawing.Point(319, 357);
+            this.comboBox4.Location = new System.Drawing.Point(279, 268);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(88, 28);
+            this.comboBox4.Size = new System.Drawing.Size(78, 23);
             this.comboBox4.TabIndex = 28;
             // 
             // comboBox5
@@ -276,9 +291,10 @@
             "3",
             "4",
             "5"});
-            this.comboBox5.Location = new System.Drawing.Point(319, 407);
+            this.comboBox5.Location = new System.Drawing.Point(279, 305);
+            this.comboBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(88, 28);
+            this.comboBox5.Size = new System.Drawing.Size(78, 23);
             this.comboBox5.TabIndex = 29;
             // 
             // comboBox6
@@ -290,9 +306,10 @@
             "3",
             "4",
             "5"});
-            this.comboBox6.Location = new System.Drawing.Point(319, 464);
+            this.comboBox6.Location = new System.Drawing.Point(279, 348);
+            this.comboBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(88, 28);
+            this.comboBox6.Size = new System.Drawing.Size(78, 23);
             this.comboBox6.TabIndex = 30;
             // 
             // comboBox7
@@ -304,9 +321,10 @@
             "3",
             "4",
             "5"});
-            this.comboBox7.Location = new System.Drawing.Point(319, 516);
+            this.comboBox7.Location = new System.Drawing.Point(279, 387);
+            this.comboBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(88, 28);
+            this.comboBox7.Size = new System.Drawing.Size(78, 23);
             this.comboBox7.TabIndex = 31;
             // 
             // comboBox8
@@ -318,9 +336,10 @@
             "3",
             "4",
             "5"});
-            this.comboBox8.Location = new System.Drawing.Point(319, 566);
+            this.comboBox8.Location = new System.Drawing.Point(279, 424);
+            this.comboBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(88, 28);
+            this.comboBox8.Size = new System.Drawing.Size(78, 23);
             this.comboBox8.TabIndex = 32;
             // 
             // menuStrip1
@@ -330,14 +349,15 @@
             this.openFileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(819, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(717, 24);
             this.menuStrip1.TabIndex = 33;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // openFileToolStripMenuItem
             // 
             this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
-            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
+            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.openFileToolStripMenuItem.Text = "Open file";
             this.openFileToolStripMenuItem.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click);
             // 
@@ -348,9 +368,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 722);
+            this.ClientSize = new System.Drawing.Size(717, 542);
             this.Controls.Add(this.comboBox8);
             this.Controls.Add(this.comboBox7);
             this.Controls.Add(this.comboBox6);
@@ -359,8 +379,8 @@
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.loadweight);
+            this.Controls.Add(this.saveweight);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
@@ -378,6 +398,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
@@ -403,8 +424,8 @@
         private Label label7;
         private Label label8;
         private Label label9;
-        private Button button5;
-        private Button button6;
+        private Button saveweight;
+        private Button loadweight;
         private ComboBox comboBox1;
         private ComboBox comboBox2;
         private ComboBox comboBox3;
@@ -416,5 +437,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem openFileToolStripMenuItem;
         private OpenFileDialog openFileDialog1;
+        private SaveFileDialog saveFileDialog1;
     }
 }

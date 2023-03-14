@@ -31,8 +31,7 @@ public partial class Form1 : Form
 
         for (int i = 0; i < Convert.ToInt32(textBox4.Text); i++)
         {
-            Debug.WriteLine("Epoch " + Convert.ToInt32(textBox4.Text));
-
+            Debug.WriteLine("Epoch " + i);
             foreach (var row in data)
             {
                 nn.setInputs(0, row.Inputs[0]);
@@ -66,5 +65,31 @@ public partial class Form1 : Form
     private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
     {
         newFile = openFileDialog1.FileName;
+    }
+
+    private void saveweight_Click(object sender, EventArgs e)
+    {
+        SaveFileDialog saveFileDialog = new SaveFileDialog();
+        saveFileDialog.Filter = "txt files (*.txt)|*.txt";
+        string path = string.Empty;
+
+        if(saveFileDialog.ShowDialog() == DialogResult.Cancel)
+            return;
+        path = Path.GetFullPath(saveFileDialog1.FileName);
+        nn.saveWeights(path);
+    }
+
+    private void loadweight_Click(object sender, EventArgs e)
+    {
+        using var open = new OpenFileDialog();
+        open.Filter = "txt files (*.txt)|*.txt";
+        open.Title = "Load Weight";
+
+        string path = open.ShowDialog() == DialogResult.OK ? open.FileName : string.Empty;
+
+        if(path != string.Empty)
+        {
+            nn.loadWeights(path);
+        }
     }
 }
