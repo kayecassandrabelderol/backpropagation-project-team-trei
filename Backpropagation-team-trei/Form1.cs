@@ -4,7 +4,7 @@ using System.Diagnostics;
 namespace Backpropagation_team_trei;
 public partial class Form1 : Form
 {
-    NeuralNet nn;
+    NeuralNet nn = new NeuralNet();
     String newFile;
      
     public Form1()
@@ -50,7 +50,23 @@ public partial class Form1 : Form
 
     private void button3_Click(object sender, EventArgs e)
     {
-        //nn.setInputs(0, Convert.ToDouble(textBox1.Text));
+        double input1 = Convert.ToDouble(comboBox1.SelectedItem.ToString());
+        double input2 = Convert.ToDouble(comboBox2.SelectedItem.ToString());
+        double input3 = Convert.ToDouble(comboBox3.SelectedItem.ToString());
+        double input4 = Convert.ToDouble(comboBox4.SelectedItem.ToString());
+        double input5 = Convert.ToDouble(comboBox5.SelectedItem.ToString());
+        double input6 = Convert.ToDouble(comboBox6.SelectedItem.ToString());
+        double input7 = Convert.ToDouble(comboBox7.SelectedItem.ToString());
+        double input8 = Convert.ToDouble(comboBox8.SelectedItem.ToString());
+
+        nn.setInputs(0, input1);
+        nn.setInputs(1, input2);
+        nn.setInputs(2, input3);
+        nn.setInputs(3, input4);
+        nn.setInputs(4, input5);
+        nn.setInputs(5, input6);
+        nn.setInputs(6, input7);
+        nn.setInputs(7, input8);
         nn.run();
         //double ans = nn.getOuputData(0) ;
         output.Text = "" + nn.getOuputData(0);
@@ -71,8 +87,8 @@ public partial class Form1 : Form
     {
         //SaveFileDialog saveFileDialog = new SaveFileDialog();
         //saveFileDialog.Filter = "txt files (*.txt)|*.txt";
-        string path = "D:\\CIT-U\\ISTeam\\weights.txt";
-
+        string path = "C:\\Users\\Kaye Belderol\\Downloads\\weights.txt";
+        
         //if(saveFileDialog.ShowDialog() == DialogResult.Cancel)
         //    return;
         //path = Path.GetFullPath(saveFileDialog1.FileName);
@@ -81,13 +97,13 @@ public partial class Form1 : Form
 
     private void loadweight_Click(object sender, EventArgs e)
     {
-        using var open = new OpenFileDialog();
-        open.Filter = "txt files (*.txt)|*.txt";
-        open.Title = "Load Weight";
+        //using var open = new OpenFileDialog();
+        //open.Filter = "txt files (*.txt)|*.txt";
+        //open.Title = "Load Weight";
 
-        string path = open.ShowDialog() == DialogResult.OK ? open.FileName : string.Empty;
+        string path = "C:\\Users\\Kaye Belderol\\Downloads\\weights.txt";
 
-        if(path != string.Empty)
+        if (path != string.Empty)
         {
             nn.loadWeights(path);
         }
